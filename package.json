@@ -1,0 +1,31 @@
+{
+  "name": "The Creative Portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio créatif simple avec HTML, CSS, SCSS, JavaScript et GSAP",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass scss/style.scss css/style.css",
+    "sass:watch": "sass --watch scss/style.scss:css/style.css",
+    "serve": "live-server --port=3000",
+    "dev": "concurrently \"npm run sass:watch\" \"npm run serve\""
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "scss",
+    "javascript",
+    "gsap",
+    "frontend"
+  ],
+  "author": "KMA",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.0",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
+  }
+}

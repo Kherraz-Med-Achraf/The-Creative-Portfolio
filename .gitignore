@@ -1,0 +1,64 @@
+# Dépendances
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de cache
+.npm
+.yarn-integrity
+
+# Fichiers de build/compilation
+dist/
+build/
+
+# Fichiers CSS compilés (si vous voulez ignorer la version compilée)
+# css/style.css
+# css/style.css.map
+
+# Fichiers de cache Sass
+.sass-cache/
+*.css.map
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache/
+
+# Fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Éditeurs de code
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+
+# Fichiers de test
+coverage/
+.nyc_output/
+
+# Dossier de déploiement
+deploy/
