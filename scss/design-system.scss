@@ -1,0 +1,118 @@
+// Design System - Variables, Fonts et Mixins
+// ============================================
+
+// Variables de couleurs
+// ---------------------
+$primary-color: #222222;
+$light-grey: #c2c2c2;
+$secondary-color: #049aff;
+$accent-color: #e74c3c;
+$text-color: #333;
+$background-color: #f2f2f2;
+$white: #ffffff;
+
+// Variables de typographie
+// ------------------------
+$font-primary: "Space Grotesk", sans-serif;
+$font-display: "Bebas Neue", sans-serif;
+$font-display-2: "Pathway Gothic One", sans-serif;
+$font-fallback: "Arial", sans-serif;
+
+// Variables de spacing
+// --------------------
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 32px;
+$spacing-lg: 48px;
+$spacing-xl: 64px;
+
+// Variables de breakpoints
+// ------------------------
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Variables de layout
+// -------------------
+$max-width: 1200px;
+$header-height: 80px;
+
+// Mixins utilitaires
+// ------------------
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+@mixin section-spacing {
+  padding: $spacing-xl 0;
+}
+
+// Mixins responsive
+// -----------------
+@mixin mobile {
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Mixins de typographie
+// ---------------------
+@mixin heading-style($size: 2rem, $weight: 400, $line-height: 1.2, $color: $primary-color) {
+  font-family: $font-display;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin body-text($size: 1rem, $weight: 400, $line-height: 1.6) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $text-color;
+}
+
+// Reset global
+// ------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include body-text();
+  background-color: $background-color;
+}
