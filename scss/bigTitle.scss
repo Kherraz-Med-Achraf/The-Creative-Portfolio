@@ -4,7 +4,7 @@
 
 #big-title {
   padding: 0 $spacing-sm;
-  height: 100vh;
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,6 +63,9 @@
     gap: 200px;
     h1 {
       @include heading-style(90px, 400);
+      &:last-child {
+        margin-left: 0px;
+      }
       .stamp-animation {
         bottom: -220px;
         right: -250px;
@@ -85,13 +88,27 @@
 @media (min-width: $breakpoint-lg) {
   #big-title {
     padding: 0 $spacing-lg;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  #big-title {
+    padding: 0 $spacing-xl;
+    h1 {
+      @include heading-style(125px, 400);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  #big-title {
     h1 {
       @include heading-style(150px, 400);
     }
   }
 }
 
-@media (min-width: $breakpoint-xl) {
+@media (min-width: $breakpoint-xxxl) {
   #big-title {
     padding: 0 $spacing-xl;
     h1 {

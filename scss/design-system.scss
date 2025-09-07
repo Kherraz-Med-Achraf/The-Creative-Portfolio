@@ -15,8 +15,8 @@ $white: #ffffff;
 // ------------------------
 $font-primary: "Space Grotesk", sans-serif;
 $font-display: "Bebas Neue", sans-serif;
-$font-display-2: "Pathway Gothic One", sans-serif;
 $font-fallback: "Arial", sans-serif;
+$font-press-start: "Press Start 2P", cursive;
 
 // Variables de spacing
 // --------------------
@@ -32,11 +32,8 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-
-// Variables de layout
-// -------------------
-$max-width: 1200px;
-$header-height: 80px;
+$breakpoint-xxl: 1440px;
+$breakpoint-xxxl: 1920px;
 
 // Mixins utilitaires
 // ------------------
@@ -52,22 +49,20 @@ $header-height: 80px;
   align-items: center;
 }
 
-@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
-  transition: $property $duration $timing;
-}
-
-@mixin container {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 $spacing-md;
-}
-
-@mixin section-spacing {
-  padding: $spacing-xl 0;
-}
-
 // Mixins de typographie
 // ---------------------
+
+@mixin logo-style(
+  $size: 2rem,
+  $weight: 400,
+  $color: $primary-color
+) {
+  font-family: $font-press-start;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
 @mixin heading-style(
   $size: 2rem,
   $weight: 400,
