@@ -1,10 +1,7 @@
-import { gsap } from "../node_modules/gsap/index.js";
-import { SplitText } from "../node_modules/gsap/SplitText.js";
-import { ScrollTrigger } from "../node_modules/gsap/ScrollTrigger.js";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 
-const bigTitle = () => {
+const animations = () => {
     const bigTitleContainer = document.querySelector('#big-title');
     const bigTitle = document.querySelector('#big-title-text .title-content');
     const bigTitle2 = document.querySelector('#big-title-text-2'); 
@@ -66,6 +63,8 @@ const bigTitle = () => {
         ease: "expo.out",
         stagger: 0.2,
     }, "<+0.5");
+
+    console.log('Animations chargées avec succès !');
 }
 
-export default bigTitle;
+export default animations;

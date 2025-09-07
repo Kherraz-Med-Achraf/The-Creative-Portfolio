@@ -1,9 +1,8 @@
-import bigTitle from './bigTitle.js';
-
+import animations from "./animations.js";
 // Animation GSAP pour le portfolio
 document.addEventListener('DOMContentLoaded', function() {
     
-    bigTitle();
+    animations();
     
 
 
