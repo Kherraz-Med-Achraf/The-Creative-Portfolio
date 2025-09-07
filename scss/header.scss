@@ -9,6 +9,7 @@ header {
   height: 100px;
 
   .logo {
+    overflow: hidden;
     h2 {
       @include heading-style(32px, 400);
     }
@@ -66,6 +67,7 @@ header {
     visibility: hidden;
     transition: all 0.4s ease;
     z-index: 999;
+    overflow: hidden;
 
     &.active {
       opacity: 1;

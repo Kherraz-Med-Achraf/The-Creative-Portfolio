@@ -11,18 +11,22 @@
   align-items: flex-start;
   gap: 250px;
   position: relative;
-  overflow: hidden;
   h1 {
     position: relative;
-    overflow: hidden;
     @include heading-style(60px, 400);
     width: fit-content;
+    .title-content {
+      display: inline-block;
+
+      overflow: hidden;
+    }
     &:last-child {
       text-align: end;
       align-self: flex-end;
       margin-left: 75px;
+      overflow: hidden;
     }
-    span {
+    span:not(.title-content) {
       color: $light-grey;
     }
     .stamp-animation {

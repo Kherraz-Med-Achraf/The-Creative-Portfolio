@@ -23,6 +23,9 @@ header {
   z-index: 1000;
   height: 100px;
 }
+header .logo {
+  overflow: hidden;
+}
 header .logo h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
@@ -74,6 +77,7 @@ header .main-nav {
   visibility: hidden;
   transition: all 0.4s ease;
   z-index: 999;
+  overflow: hidden;
 }
 header .main-nav.active {
   opacity: 1;
@@ -216,11 +220,9 @@ header .main-nav.active .nav-links li {
   align-items: flex-start;
   gap: 250px;
   position: relative;
-  overflow: hidden;
 }
 #big-title h1 {
   position: relative;
-  overflow: hidden;
   font-family: "Bebas Neue", sans-serif;
   font-size: 60px;
   font-weight: 400;
@@ -228,12 +230,17 @@ header .main-nav.active .nav-links li {
   color: #222222;
   width: fit-content;
 }
+#big-title h1 .title-content {
+  display: inline-block;
+  overflow: hidden;
+}
 #big-title h1:last-child {
   text-align: end;
   align-self: flex-end;
   margin-left: 75px;
+  overflow: hidden;
 }
-#big-title h1 span {
+#big-title h1 span:not(.title-content) {
   color: #c2c2c2;
 }
 #big-title h1 .stamp-animation {
