@@ -220,6 +220,7 @@ header .main-nav.active .nav-links li {
 }
 #big-title h1 {
   position: relative;
+  overflow: hidden;
   font-family: "Bebas Neue", sans-serif;
   font-size: 60px;
   font-weight: 400;

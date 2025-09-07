@@ -14,6 +14,7 @@
   overflow: hidden;
   h1 {
     position: relative;
+    overflow: hidden;
     @include heading-style(60px, 400);
     width: fit-content;
     &:last-child {
