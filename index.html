@@ -31,15 +31,28 @@
       <section id="big-title">
         <h1>
           Your Next
-          <div class="lottie-animation">
-            <dotlottie-wc
-              src="https://lottie.host/e3c1a9ee-aa3b-4267-a9e0-99b0e3e3ae6a/s9hQ21I35a.lottie"
-              style="width: 400px; height: 400px"
-              speed="1"
-              autoplay
-              loop
+          <div class="stamp-animation">
+            <svg
+              class="stamp-svg"
+              viewBox="0 0 400 400"
+              aria-hidden="true"
+              focusable="false"
             >
-            </dotlottie-wc>
+              <defs>
+                <path
+                  id="text-circle"
+                  d="M200,200 m-140,0 a140,140 0 1,1 280,0 a140,140 0 1,1 -280,0"
+                />
+              </defs>
+              <circle class="stamp-bg" cx="200" cy="200" r="180" />
+              <text class="stamp-icon" x="200" y="200">&lt;/&gt;</text>
+              <text class="stamp-text">
+                <textPath href="#text-circle" startOffset="0%">
+                  CREATIVE • DEVELOPER • FRONTEND • BACKEND • ANIMATION • DESIGN
+                  •
+                </textPath>
+              </text>
+            </svg>
           </div>
         </h1>
         <h1><span>_Creative</span> Developer</h1>

@@ -14,44 +14,158 @@ body {
 }
 
 #big-title {
-  padding: 0 64px;
+  padding: 0 16px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 150px;
+  align-items: flex-start;
+  gap: 250px;
   position: relative;
   overflow: hidden;
 }
 #big-title h1 {
   position: relative;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 200px;
+  font-size: 60px;
   font-weight: 400;
   line-height: 1.2;
   color: #222222;
   width: fit-content;
 }
+#big-title h1:last-child {
+  text-align: end;
+  align-self: flex-end;
+  margin-left: 75px;
+}
 #big-title h1 span {
   color: #c2c2c2;
 }
-#big-title h1 {
-  transition: transform 0.6s ease-out;
-}
-#big-title h1:last-child {
-  align-self: flex-end;
-  margin-bottom: 0;
-}
-#big-title h1 .lottie-animation {
+#big-title h1 .stamp-animation {
   position: absolute;
-  bottom: -200px;
-  right: -350px;
+  bottom: -230px;
+  right: -150px;
   z-index: -1;
-  transition: transform 0.8s ease-out;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#big-title h1 .lottie-animation dotlottie-wc {
-  width: 400px;
-  height: 400px;
+#big-title h1 .stamp-animation .stamp-icon {
+  text-anchor: middle;
+  dominant-baseline: middle;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: #222222;
+  color: #222222;
+}
+#big-title h1 .stamp-animation .stamp-svg {
+  width: 100%;
+  height: 100%;
+}
+#big-title h1 .stamp-animation .stamp-bg {
+  fill: greenyellow;
+}
+#big-title h1 .stamp-animation .stamp-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: #222222;
+  color: #222222;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: spin 25s linear infinite;
+  transform-origin: 200px 200px;
+}
+
+@media (min-width: 576px) {
+  #big-title {
+    gap: 200px;
+  }
+  #big-title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #222222;
+  }
+  #big-title h1 .stamp-animation {
+    bottom: -220px;
+    right: -250px;
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  #big-title {
+    padding: 0 32px;
+  }
+  #big-title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #222222;
+  }
+}
+@media (min-width: 992px) {
+  #big-title {
+    padding: 0 48px;
+  }
+  #big-title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #222222;
+  }
+}
+@media (min-width: 1200px) {
+  #big-title {
+    padding: 0 64px;
+  }
+  #big-title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #222222;
+  }
+  #big-title h1:last-child {
+    align-self: flex-end;
+  }
+  #big-title h1 .stamp-animation {
+    bottom: -200px;
+    right: -375px;
+    width: 400px;
+    height: 400px;
+  }
+  #big-title h1 .stamp-animation .stamp-icon {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: #222222;
+    color: #222222;
+  }
+  #big-title h1 .stamp-animation .stamp-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: #222222;
+    color: #222222;
+    letter-spacing: 1.5px;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
