@@ -23,6 +23,8 @@ const initCursor = () => {
         link.addEventListener("mouseenter", () => {
             if (link.dataset.cursor === "nav") {
                 $cursor.classList.add(`is-hovering-nav`)
+            } else if (link.dataset.cursor === "logo") {
+                $cursor.classList.add(`is-hovering-logo`)
             } else {
                 $cursor.classList.add(`is-hovering`) 
             }
@@ -30,6 +32,8 @@ const initCursor = () => {
         link.addEventListener("mouseleave", () => {
             if (link.dataset.cursor === "nav") {
                 $cursor.classList.remove(`is-hovering-nav`)
+            } else if (link.dataset.cursor === "logo") {
+                $cursor.classList.remove(`is-hovering-logo`)
             } else {
                 $cursor.classList.remove(`is-hovering`) 
             }

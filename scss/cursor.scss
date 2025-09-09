@@ -43,3 +43,11 @@
     background-color: $primary-color;
   }
 }
+
+.cursor.is-hovering-logo {
+  .cursor__bg1 {
+    scale: 0.55;
+    background-color: white;
+    border: 1px solid $primary-color;
+  }
+}

@@ -32,6 +32,7 @@ header .logo h2 {
   font-weight: 400;
   line-height: 1.2;
   color: #222222;
+  user-select: none;
 }
 header .burger-menu {
   display: flex;
@@ -439,6 +440,12 @@ header .main-nav.active .nav-links li {
 .cursor.is-hovering-nav .cursor__bg1 {
   scale: 0.55;
   background-color: #222222;
+}
+
+.cursor.is-hovering-logo .cursor__bg1 {
+  scale: 0.55;
+  background-color: white;
+  border: 1px solid #222222;
 }
 
 /*# sourceMappingURL=style.css.map */

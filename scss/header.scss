@@ -12,6 +12,7 @@ header {
     overflow: hidden;
     h2 {
       @include heading-style(32px, 400);
+      user-select: none;
     }
   }
 
