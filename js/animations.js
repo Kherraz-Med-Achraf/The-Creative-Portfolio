@@ -15,6 +15,47 @@ const animations = () => {
     const title_2 = new SplitText(bigTitle2, { type: "chars,words", charsClass: "char-js", wordsClass: "word-js" });
     const title_3 = new SplitText(creative, { type: "chars,words", charsClass: "char-js", wordsClass: "word-js" });
 
+    //hover effect
+// Fonction qui installe les events hover + reset
+function initCharHoverAnimation(titles, stamp) {
+    // Regroupe les chars de tous les SplitText passés
+    const allChars = titles.flatMap(t => t.chars);
+
+    // hover effect
+    allChars.forEach(char => {
+        char.addEventListener("mouseenter", () => {
+            gsap.to(char, {
+                duration: 0.3,
+                y: -75,
+                rotate: Math.random() * 360 - 180,
+                ease: "power1.out",
+            });
+        });
+
+        char.addEventListener("mouseleave", () => {
+            gsap.to(char, {
+                duration: 0.3,
+                y: 0,
+                ease: "power2.out",
+            });
+        });
+    });
+
+    // reset on click
+    stamp.addEventListener("click", () => {
+        allChars.forEach(c => {
+            gsap.to(c, {
+                duration: 0.3,
+                y: 0,
+                rotate: 0,
+                ease: "power2.out",
+            });
+        });
+    });
+}
+
+    
+
 
     // Utiliser les mots pour l'animation des titres 1 et 2
     const words_1 = title_1.words;
@@ -39,13 +80,13 @@ const animations = () => {
         duration: 3,
         yPercent: 100,
         ease: "expo.out",
-    }, "<");
+    }, "<")
     tl.from(chars_3, {
         duration: 1.8,
         yPercent: 100,
         ease: "elastic.out(0.5,0.3)",
         stagger: 0.06,
-    }, "<+0.5");
+    }, "<+0.5")
     tl.from(stamp, {
         duration: 2.2,
         scale: 0,
@@ -63,8 +104,18 @@ const animations = () => {
         ease: "expo.out",
         stagger: 0.2,
     }, "<+0.5");
+    tl.add(() => {
+        gsap.set(bigTitle, { overflow: "visible" });
+    }, "<");
+    tl.add(() => {
+        gsap.set(bigTitle2, { overflow: "visible" });
+    }, "<");
+    tl.add(() => {
+        gsap.set(chars_3, { overflow: "visible" });
+    }, "<")
+    tl.add(() => initCharHoverAnimation([title_1, title_2, title_3], stamp), "<");
 
-    console.log('Animations chargées avec succès !');
+    
 }
 
 export default animations;

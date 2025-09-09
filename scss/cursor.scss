@@ -1,0 +1,45 @@
+@use "design-system" as *;
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 14rem;
+  height: 14rem;
+  overflow: hidden;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.cursor__holder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cursor__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $primary-color;
+  border-radius: 50%;
+  scale: 0.1;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.cursor.is-hovering {
+  .cursor__bg1 {
+    scale: 1;
+    background-color: greenyellow;
+  }
+}
+
+.cursor.is-hovering-nav {
+  .cursor__bg1 {
+    scale: 0.55;
+    background-color: $primary-color;
+  }
+}

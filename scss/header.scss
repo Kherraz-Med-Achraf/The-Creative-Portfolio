@@ -164,11 +164,11 @@ header {
           transition: none;
 
           a {
-            @include body-text(24px, 400);
+            @include heading-style(24px, 400);
             color: $primary-color;
 
             &:hover {
-              color: $secondary-color;
+              color: white;
             }
           }
         }
@@ -187,7 +187,7 @@ header {
       gap: $spacing-xl;
 
       li a {
-        @include body-text(28px, 400);
+        @include heading-style(28px, 400);
       }
     }
   }
@@ -199,7 +199,7 @@ header {
       gap: calc($spacing-xl * 1.5);
 
       li a {
-        @include body-text(32px, 400);
+        @include heading-style(32px, 400);
       }
     }
   }

@@ -28,8 +28,16 @@
     </header> -->
 
     <main>
+      <!-- cursor  -->
+      <div class="cursor">
+        <div class="cursor__holder">
+          <div class="cursor__bg cursor__bg1"></div>
+          </div>
+        </div>
+      </div>
+
       <header>
-        <div class="logo">
+        <div class="logo" data-cursor="true">
           <h2>&lt; KMA /&gt;</h2>
         </div>
 
@@ -46,15 +54,15 @@
 
         <nav class="main-nav">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li data-cursor="nav"><a href="#about">About</a></li>
+            <li data-cursor="nav"><a href="#projects">Projects</a></li>
+            <li data-cursor="nav"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
       <section id="big-title">
         <h1 id="big-title-text">
-          <span class="title-content"> Your Next </span>
+          <span class="title-content" data-cursor="true"> Your Next </span>
           <div class="stamp-animation">
             <svg
               class="stamp-svg"
@@ -79,7 +87,7 @@
             </svg>
           </div>
         </h1>
-        <h1 id="big-title-text-2">
+        <h1 id="big-title-text-2" data-cursor="true">
           <span id="creative">_Creative</span> Developer
         </h1>
       </section>
