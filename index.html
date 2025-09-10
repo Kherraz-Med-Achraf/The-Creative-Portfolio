@@ -13,134 +13,173 @@
     />
   </head>
   <body>
-    <!-- <header>
-        <nav>
-            <div class="logo">
-                <h2>Portfolio</h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
-
-    <main>
-      <!-- cursor  -->
-      <div class="cursor">
-        <div class="cursor__holder">
-          <div class="cursor__bg cursor__bg1"></div>
-          </div>
-        </div>
+    <!-- cursor: hors du contenu lissé pour garder position: fixed -->
+    <div class="cursor">
+      <div class="cursor__holder">
+        <div class="cursor__bg cursor__bg1"></div>
       </div>
+    </div>
 
-      <header>
-        <div class="logo" data-cursor="logo">
-          <h2>&lt; KMA /&gt;</h2>
-        </div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <header>
+            <div class="logo" data-cursor="logo">
+              <h2>&lt; KMA /&gt;</h2>
+            </div>
 
-        <!-- Menu Burger -->
-        <button
-          class="burger-menu"
-          aria-label="Ouvrir le menu"
-          aria-expanded="false"
-        >
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-        </button>
-
-        <nav class="main-nav">
-          <ul class="nav-links">
-            <li data-cursor="nav"><a href="#about">About</a></li>
-            <li data-cursor="nav"><a href="#projects">Projects</a></li>
-            <li data-cursor="nav"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section id="big-title">
-        <h1 id="big-title-text">
-          <span class="title-content" data-cursor="true"> Your Next </span>
-          <div class="stamp-animation">
-            <svg
-              class="stamp-svg"
-              viewBox="0 0 400 400"
-              aria-hidden="true"
-              focusable="false"
+            <!-- Menu Burger -->
+            <button
+              class="burger-menu"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
             >
-              <defs>
-                <path
-                  id="text-circle"
-                  d="M200,200 m-140,0 a140,140 0 1,1 280,0 a140,140 0 1,1 -280,0"
-                />
-              </defs>
-              <circle class="stamp-bg" cx="200" cy="200" r="180" />
-              <text class="stamp-icon" x="200" y="200">&lt;/&gt;</text>
-              <text class="stamp-text">
-                <textPath href="#text-circle" startOffset="0%">
-                  CREATIVE • DEVELOPER • FRONTEND • BACKEND • ANIMATION • DESIGN
-                  •
-                </textPath>
-              </text>
-            </svg>
-          </div>
-        </h1>
-        <h1 id="big-title-text-2" data-cursor="true">
-          <span id="creative">_Creative</span> Developer
-        </h1>
-      </section>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </button>
 
-      <section id="apropos" class="about">
-        <div class="container">
-          <h2>À propos de moi</h2>
-          <p>Votre description personnelle ici...</p>
-        </div>
-      </section>
+            <nav class="main-nav">
+              <ul class="nav-links">
+                <li data-cursor="nav"><a href="#about">About</a></li>
+                <li data-cursor="nav"><a href="#projects">Projects</a></li>
+                <li data-cursor="nav"><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+          <section id="big-title">
+            <h1 id="big-title-text">
+              <span class="title-content" data-cursor="true"> Your Next </span>
+              <div class="stamp-animation">
+                <svg
+                  class="stamp-svg"
+                  viewBox="0 0 400 400"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <defs>
+                    <path
+                      id="text-circle"
+                      d="M200,200 m-140,0 a140,140 0 1,1 280,0 a140,140 0 1,1 -280,0"
+                    />
+                  </defs>
+                  <circle class="stamp-bg" cx="200" cy="200" r="180" />
+                  <text class="stamp-icon" x="200" y="200">&lt;/&gt;</text>
+                  <text class="stamp-text">
+                    <textPath href="#text-circle" startOffset="0%">
+                      CREATIVE • DEVELOPER • FRONTEND • BACKEND • ANIMATION •
+                      DESIGN •
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+            </h1>
+            <h1 id="big-title-text-2" data-cursor="true">
+              <span id="creative">_Creative</span> Developer
+            </h1>
+          </section>
 
-      <section id="projets" class="projects">
-        <div class="container">
-          <h2>Mes Projets</h2>
-          <div class="project-grid">
-            <div class="project-card">
-              <h3>Projet 1</h3>
-              <p>Description du projet</p>
+          <section id="marquee" class="marquee">
+            <ul class="section__list">
+              <li class="section__each">
+                <div class="marquee-travel first">
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>WEB</span>
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>ANIMATION</span>
+
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>WEB</span>
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>ANIMATION</span>
+                </div>
+
+                <div class="marquee-travel second">
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>IS FUN</span>
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>IS FUN</span>
+
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>IS FUN</span>
+                  <img
+                    src="./assets/images/yumu-9-dkDEXWGzI-unsplash.jpg"
+                    alt="marquee image"
+                  />
+                  <span>IS FUN</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section id="apropos" class="about">
+            <div class="container">
+              <h2>À propos de moi</h2>
+              <p>Votre description personnelle ici...</p>
             </div>
-            <div class="project-card">
-              <h3>Projet 2</h3>
-              <p>Description du projet</p>
-            </div>
-            <div class="project-card">
-              <h3>Projet 3</h3>
-              <p>Description du projet</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>Contactez-moi pour collaborer !</p>
-          <div class="contact-info">
-            <p>Email: votre.email@example.com</p>
-            <p>Téléphone: +33 X XX XX XX XX</p>
-          </div>
-        </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-    </main>
+          <section id="projets" class="projects">
+            <div class="container">
+              <h2>Mes Projets</h2>
+              <div class="project-grid">
+                <div class="project-card">
+                  <h3>Projet 1</h3>
+                  <p>Description du projet</p>
+                </div>
+                <div class="project-card">
+                  <h3>Projet 2</h3>
+                  <p>Description du projet</p>
+                </div>
+                <div class="project-card">
+                  <h3>Projet 3</h3>
+                  <p>Description du projet</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-    <footer>
-      <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
+          <section id="contact" class="contact">
+            <div class="container">
+              <h2>Contact</h2>
+              <p>Contactez-moi pour collaborer !</p>
+              <div class="contact-info">
+                <p>Email: votre.email@example.com</p>
+                <p>Téléphone: +33 X XX XX XX XX</p>
+              </div>
+            </div>
+          </section>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </main>
+      </div>
+    </div>
 
     <script
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"

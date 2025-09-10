@@ -1,0 +1,41 @@
+@use "design-system" as *;
+
+/* ___________________ CHALLENGE ___________________ */
+/* ___________________ CHALLENGE ___________________ */
+.marquee {
+  background-color: greenyellow;
+}
+
+
+
+
+.marquee .section__each {
+  height: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  overflow: hidden;
+}
+
+.marquee-travel {
+  @include heading-style(31.2rem, 400);
+  letter-spacing:  - 1.2rem;
+  white-space: nowrap;
+  will-change: transform;
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
+  &.second {
+    margin-top: -12rem;
+  }
+}
+
+.marquee .marquee-travel img {
+  height: 22rem;
+  width: 32rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
