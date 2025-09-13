@@ -12,13 +12,20 @@ body {
   background-color: #f2f2f2;
 }
 
+main {
+  position: relative;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 32px;
   color: #222222;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   height: 100px;
 }
@@ -204,8 +211,8 @@ header .main-nav.active .nav-links li {
   }
 }
 #big-title {
-  padding: 0 16px;
-  min-height: calc(100vh - 100px);
+  padding: 100px 16px 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -432,7 +439,14 @@ header .main-nav.active .nav-links li {
 /* ___________________ CHALLENGE ___________________ */
 /* ___________________ CHALLENGE ___________________ */
 .marquee {
-  background-color: greenyellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #222222;
+  z-index: 100;
+  transform: translateY(100vh);
 }
 
 .marquee .section__each {
@@ -449,6 +463,7 @@ header .main-nav.active .nav-links li {
   font-size: 31.2rem;
   font-weight: 400;
   color: #222222;
+  color: #F5F5F5;
   letter-spacing: -1.2rem;
   white-space: nowrap;
   will-change: transform;
@@ -467,6 +482,11 @@ header .main-nav.active .nav-links li {
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
+}
+
+.about {
+  height: 100vh;
+  background-color: cyan;
 }
 
 /*# sourceMappingURL=style.css.map */

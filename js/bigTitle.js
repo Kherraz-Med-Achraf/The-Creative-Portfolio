@@ -165,8 +165,9 @@ const bigTitle = () => {
 
   ScrollTrigger.create({
     trigger: bigTitleContainer,
-    start: "10% top ", // quand le haut du titre atteint 25% du viewport
-    end: "10% top", // on utilise la même ligne comme "barrière"
+    start: "top top-=" + 1, // Décalé de 1px pour éviter le conflit
+    end: "top top-=" + 1, // Le point de fin doit correspondre
+    markers: false,
     onEnter: () => {
       // Scroll vers le bas → reset et supprimer les listeners
       if (hoverEventsActive) {

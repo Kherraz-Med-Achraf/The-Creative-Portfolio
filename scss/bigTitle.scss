@@ -3,8 +3,8 @@
 @use "design-system" as *;
 
 #big-title {
-  padding: 0 $spacing-sm;
-  min-height: calc(100vh - 100px);
+  padding: 100px $spacing-sm 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
